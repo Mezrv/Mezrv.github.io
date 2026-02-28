@@ -1,279 +1,33 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #f5f5f5;
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-
-.container {
-    width: 100%;
-    max-width: 480px;
-    margin: 0 auto;
-    background-color: white;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* ===== HEADER SECTION (LOGO + TOP BUTTONS) ===== */
-.header-section {
-    background: linear-gradient(90deg, #86CCFF 0%, #3F82D9 56%, #0B3C8F 100%);
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    justify-content: space-between;
-}
-
-.logo-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-shrink: 0;
-}
-
 .logo {
-    width: 80px;
-    height: 80px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    object-fit: contain;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 5px;
-}
-
-/* Три кнопки сверху */
-.buttons-top {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex: 1;
-    height: 80px;
-    justify-content: center;
-}
-
-.top-button {
-    flex: 1;
-    padding: 8px 12px;
-    font-size: 12px;
-    font-weight: 600;
-    color: white;
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 1.5px solid white;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.top-button:active {
-    background-color: rgba(255, 255, 255, 0.4);
-    transform: scale(0.95);
-}
-
-.top-button:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-/* Кнопка с телефоном */
-.phone-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.phone-icon {
-    width: 20px;
-    height: 20px;
-    color: white;
-}
-
-/* ===== HERO SECTION ===== */
-.hero {
-    background: linear-gradient(90deg, #86CCFF 0%, #3F82D9 56%, #0B3C8F 100%);
-    padding: 30px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: auto;
-    text-align: center;
-    color: white;
-}
-
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.name {
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    color: white;
-}
-
-.tagline {
-    font-size: 15px;
-    font-weight: 500;
-    opacity: 0.95;
-    letter-spacing: 0.3px;
-    color: white;
-}
-
-/* ===== DESCRIPTION SECTION ===== */
-.description {
-    flex: 1;
-    padding: 25px 20px;
-    overflow-y: auto;
-}
-
-.intro-text {
-    font-size: 15px;
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 18px;
-    text-align: justify;
-}
-
-.services {
-    margin-top: 25px;
-    padding-top: 20px;
-    border-top: 2px solid #e0e0e0;
-}
-
-.services h2 {
-    font-size: 18px;
-    color: #0B3C8F;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.service-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.service-list li {
-    font-size: 14px;
-    color: #444;
-    padding-left: 20px;
     position: relative;
-    line-height: 1.5;
+    top: -10px;
+    left: -10px;
 }
 
-.service-list li:before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #3F82D9;
-    font-weight: bold;
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
-/* ===== RESPONSIVE FOR DIFFERENT SCREEN SIZES ===== */
-@media (max-height: 600px) {
-    .header-section {
-        padding: 10px 20px;
-    }
-
-    .logo {
-        width: 70px;
-        height: 70px;
-    }
-
-    .buttons-top {
-        height: 70px;
-    }
-
-    .name {
-        font-size: 22px;
-    }
-
-    .tagline {
-        font-size: 13px;
-    }
+.button-group.first {
+    flex: 1;
 }
 
-@media (max-height: 400px) {
-    .header-section {
-        padding: 8px 15px;
-    }
-
-    .logo {
-        width: 60px;
-        height: 60px;
-    }
-
-    .buttons-top {
-        height: 60px;
-        gap: 5px;
-    }
-
-    .top-button {
-        font-size: 11px;
-        padding: 5px 8px;
-    }
-
-    .description {
-        padding: 15px;
-    }
-
-    .intro-text {
-        font-size: 13px;
-        margin-bottom: 12px;
-    }
+.button {
+    font-size: calc(100% + 1pt);
+    flex: 1;
 }
 
-/* ===== LANDSCAPE MODE ===== */
-@media (orientation: landscape) {
-    .container {
-        max-width: 100%;
-    }
+.button.group-second {
+    align-self: center;
+}
 
-    .header-section {
-        padding: 12px 20px;
-    }
+.header {
+    position: sticky;
+    top: 0;
+}
 
-    .logo {
-        width: 70px;
-        height: 70px;
-    }
-
-    .buttons-top {
-        height: 70px;
-    }
-
-    .hero {
-        padding: 15px 20px;
-        min-height: auto;
-    }
-
-    .name {
-        font-size: 20px;
-    }
-
-    .tagline {
-        font-size: 13px;
-    }
-
-    .description {
-        max-height: 300px;
-        padding: 15px;
-    }
+.header-spacing {
+    margin-bottom: 0.5em; /* Reduced spacing for header */
 }
