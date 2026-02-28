@@ -5,74 +5,226 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    background: linear-gradient(90deg, #86CCFF 0%, #3F82D9 56%, #0B3C8F 100%);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
+    text-align: center;
+    color: white;
+}
+
+.logo-wrapper {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.name {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tagline {
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.95;
+    letter-spacing: 0.3px;
+}
+
+/* ===== DESCRIPTION SECTION ===== */
+.description {
+    flex: 1;
+    padding: 25px 20px;
+    overflow-y: auto;
+}
+
+.intro-text {
+    font-size: 15px;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
+    margin-bottom: 18px;
+    text-align: justify;
 }
 
-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 2rem;
-    text-align: center;
+.services {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #e0e0e0;
 }
 
-header h1 {
-    font-size: 2.5rem;
+.services h2 {
+    font-size: 18px;
+    color: #0B3C8F;
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-section {
-    background: white;
-    margin: 2rem 0;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-    color: #667eea;
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
-}
-
-section p {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-}
-
-.hero {
-    text-align: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-}
-
-.hero h2, .hero p {
-    color: white;
-}
-
-.projects ul {
+.service-list {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.projects li {
-    background: #f9f9f9;
-    padding: 1rem;
-    margin: 0.5rem 0;
-    border-left: 4px solid #667eea;
-    border-radius: 4px;
+.service-list li {
+    font-size: 14px;
+    color: #444;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.5;
 }
 
-footer {
-    background: #333;
+.service-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #3F82D9;
+    font-weight: bold;
+}
+
+/* ===== BUTTONS SECTION ===== */
+.buttons-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-top: 1px solid #e0e0e0;
+    background-color: #fafafa;
+}
+
+.nav-button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #0B3C8F;
+    background-color: white;
+    border: 2px solid #3F82D9;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+}
+
+.nav-button:active {
+    background-color: #3F82D9;
     color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    transform: scale(0.98);
+}
+
+.nav-button:hover {
+    background-color: #f0f7ff;
+}
+
+/* ===== RESPONSIVE FOR DIFFERENT SCREEN SIZES ===== */
+@media (max-height: 600px) {
+    .hero {
+        min-height: 280px;
+        padding: 30px 20px;
+    }
+
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .name {
+        font-size: 24px;
+    }
+
+    .tagline {
+        font-size: 14px;
+    }
+}
+
+@media (max-height: 400px) {
+    .hero {
+        min-height: 220px;
+        padding: 20px;
+    }
+
+    .description {
+        padding: 15px;
+    }
+
+    .intro-text {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+}
+
+/* ===== LANDSCAPE MODE ===== */
+@media (orientation: landscape) {
+    .container {
+        max-width: 100%;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 15px 20px;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .logo-wrapper {
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .name {
+        font-size: 22px;
+    }
+
+    .tagline {
+        font-size: 14px;
+    }
+
+    .description {
+        max-height: 300px;
+    }
 }

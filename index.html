@@ -1,41 +1,56 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой сайт</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Roman Mezentsev - Účetní služby</title>
+    <link rel="stylesheet" href="styles-main.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Добро пожаловать!</h1>
-        </nav>
-    </header>
-
-    <main>
+    <div class="container">
+        <!-- Градиентный фон с логотипом и текстом -->
         <section class="hero">
-            <h2>Привет! Это мой сайт на GitHub Pages</h2>
-            <p>Здесь вы можете узнать обо мне и моих проектах.</p>
+            <!-- Логотип -->
+            <div class="logo-wrapper">
+                <img src="Logo.png" alt="Logo" class="logo">
+            </div>
+
+            <!-- Имя и описание -->
+            <div class="hero-content">
+                <h1 class="name">Roman Mezentsev</h1>
+                <p class="tagline">Účetní služby pro OSVČ a s.r.o.</p>
+            </div>
         </section>
 
-        <section class="about">
-            <h2>Обо мне</h2>
-            <p>Я разработчик, увлекающийся созданием веб-приложений.</p>
+        <!-- Описание услуг -->
+        <section class="description">
+            <p class="intro-text">
+                Poskytuji komplexní účetní služby pro společnosti s ručením omezeným a OSVČ v Praze a okolí. Zajišťuji celý účetní proces, včetně vedení účetnictví, daňové agendy a sestavení účetní závěrky.
+            </p>
+
+            <p class="intro-text">
+                Pomáhám s agendou DPH, přípravou daňových přiznání k DPH, kontrolních a souhrnných hlášení, mzdovým účetnictvím a zpracováním veškeré daňové dokumentace. Spolupráce probíhá převážně online, přičemž na začátku spolupráce nabízím také osobní schůzku v Praze.
+            </p>
+
+            <div class="services">
+                <h2>Nabízené služby:</h2>
+                <ul class="service-list">
+                    <li>Vedení účetnictví a daňová agenda</li>
+                    <li>Zpracování DPH</li>
+                    <li>Odborné poradenství a konzultace</li>
+                    <li>Mzdová agenda a zpracování mezd</li>
+                    <li>Vyřizování žádostí a státních příspěvků</li>
+                    <li>Roční zúčtování daní</li>
+                </ul>
+            </div>
         </section>
 
-        <section class="projects">
-            <h2>Мои проекты</h2>
-            <ul>
-                <li>Проект 1</li>
-                <li>Проект 2</li>
-                <li>Проект 3</li>
-            </ul>
+        <!-- Три кнопки -->
+        <section class="buttons-section">
+            <button class="nav-button">Portfólió</button>
+            <button class="nav-button">Kontakt</button>
+            <button class="nav-button">O mně</button>
         </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Мой сайт. Все права защищены.</p>
-    </footer>
+    </div>
 </body>
 </html>
