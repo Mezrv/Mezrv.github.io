@@ -21,24 +21,21 @@ body {
     flex-direction: column;
 }
 
-/* ===== HERO SECTION ===== */
-.hero {
+/* ===== HEADER SECTION (LOGO + TOP BUTTONS) ===== */
+.header-section {
     background: linear-gradient(90deg, #86CCFF 0%, #3F82D9 56%, #0B3C8F 100%);
-    padding: 40px 20px;
+    padding: 15px 20px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 350px;
-    text-align: center;
-    color: white;
+    gap: 15px;
+    justify-content: space-between;
 }
 
 .logo-wrapper {
-    margin-bottom: 25px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .logo {
@@ -51,6 +48,71 @@ body {
     padding: 5px;
 }
 
+/* Три кнопки сверху */
+.buttons-top {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    height: 80px;
+    justify-content: center;
+}
+
+.top-button {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1.5px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.top-button:active {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(0.95);
+}
+
+.top-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Кнопка с телефоном */
+.phone-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-icon {
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    background: linear-gradient(90deg, #86CCFF 0%, #3F82D9 56%, #0B3C8F 100%);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+    text-align: center;
+    color: white;
+}
+
 .hero-content {
     display: flex;
     flex-direction: column;
@@ -58,17 +120,19 @@ body {
 }
 
 .name {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 700;
     letter-spacing: 0.5px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: white;
 }
 
 .tagline {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     opacity: 0.95;
     letter-spacing: 0.3px;
+    color: white;
 }
 
 /* ===== DESCRIPTION SECTION ===== */
@@ -122,45 +186,10 @@ body {
     font-weight: bold;
 }
 
-/* ===== BUTTONS SECTION ===== */
-.buttons-section {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    border-top: 1px solid #e0e0e0;
-    background-color: #fafafa;
-}
-
-.nav-button {
-    width: 100%;
-    padding: 14px;
-    font-size: 16px;
-    font-weight: 500;
-    color: #0B3C8F;
-    background-color: white;
-    border: 2px solid #3F82D9;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: capitalize;
-}
-
-.nav-button:active {
-    background-color: #3F82D9;
-    color: white;
-    transform: scale(0.98);
-}
-
-.nav-button:hover {
-    background-color: #f0f7ff;
-}
-
 /* ===== RESPONSIVE FOR DIFFERENT SCREEN SIZES ===== */
 @media (max-height: 600px) {
-    .hero {
-        min-height: 280px;
-        padding: 30px 20px;
+    .header-section {
+        padding: 10px 20px;
     }
 
     .logo {
@@ -168,19 +197,37 @@ body {
         height: 70px;
     }
 
+    .buttons-top {
+        height: 70px;
+    }
+
     .name {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .tagline {
-        font-size: 14px;
+        font-size: 13px;
     }
 }
 
 @media (max-height: 400px) {
-    .hero {
-        min-height: 220px;
-        padding: 20px;
+    .header-section {
+        padding: 8px 15px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .buttons-top {
+        height: 60px;
+        gap: 5px;
+    }
+
+    .top-button {
+        font-size: 11px;
+        padding: 5px 8px;
     }
 
     .description {
@@ -199,16 +246,8 @@ body {
         max-width: 100%;
     }
 
-    .hero {
-        min-height: auto;
-        padding: 15px 20px;
-        flex-direction: row;
-        gap: 30px;
-    }
-
-    .logo-wrapper {
-        margin-bottom: 0;
-        flex-shrink: 0;
+    .header-section {
+        padding: 12px 20px;
     }
 
     .logo {
@@ -216,15 +255,25 @@ body {
         height: 70px;
     }
 
+    .buttons-top {
+        height: 70px;
+    }
+
+    .hero {
+        padding: 15px 20px;
+        min-height: auto;
+    }
+
     .name {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .tagline {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .description {
         max-height: 300px;
+        padding: 15px;
     }
 }
